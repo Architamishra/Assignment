@@ -1,0 +1,190 @@
+/* Container Styling */
+.stu-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #e6e6fa; /* Light purple background */
+  min-height: 100vh;
+  min-width: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items from the top */
+}
+
+/* Heading Styling */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4b0082; /* Indigo color for heading */
+}
+
+/* Table Styling */
+.student-table {
+  width: 80%; /* Center the table and limit its width */
+  border-collapse: collapse;
+  margin: 20px auto; /* Center the table */
+  background-color: #ffffff; /* White table background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.student-table th {
+  background-color: #9370db; /* Medium purple for header */
+  color: white;
+  font-weight: bold;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #e6e6fa; /* Light purple for alternating rows */
+}
+
+.student-table tr:hover {
+  background-color: #dcd0ff; /* Slightly darker purple on hover */
+}
+
+/* Button Styling */
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.view-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.edit-btn {
+  background-color: #2196f3;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.add-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #6a5acd; /* Slate blue for the Add button */
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.add-btn:hover,
+.view-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+}
+
+/* Modal Overlay */
+.modal {
+  position: fixed; /* Keep modal fixed in the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff; /* White background */
+  width: 400px;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease; /* Fade-in effect */
+}
+
+/* Modal Header */
+.modal-content h3 {
+  color: #6a5acd; /* Slate blue for title */
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.modal-content input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #d3d3d3; /* Light gray border */
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.modal-content button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"] {
+  background-color: #6a5acd; /* Slate blue for Submit */
+  color: white;
+}
+
+.modal-content button[type="button"] {
+  background-color: #9370db; /* Medium purple for Cancel */
+  color: white;
+}
+
+.modal-content button:hover {
+  opacity: 0.9; /* Slightly dim on hover */
+}
+
+/* Close Button */
+.modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #6a5acd; /* Slate blue */
+  cursor: pointer;
+}
+
+.modal-content .close-btn:hover {
+  color: #4b0082; /* Indigo on hover */
+}
+
+/* Keyframes for Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
