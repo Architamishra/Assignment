@@ -39,8 +39,8 @@ const Auth = () => {
 
     try {
       const response = isSignup
-        ? await axios.post("http://localhost:4001/user/signup", userInfo)
-        : await axios.post("http://localhost:4001/user/login", userInfo); // Use a separate route for login
+        ? await axios.post("https://assignment-brown-five.vercel.app//user/signup", userInfo)
+        : await axios.post("https://assignment-brown-five.vercel.app//user/login", userInfo); // Use a separate route for login
 
       console.log(response.data);
       navigate("/student"); // Corrected path to lowercase 'student'
