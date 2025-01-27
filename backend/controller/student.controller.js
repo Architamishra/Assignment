@@ -1,4 +1,5 @@
 import Student from "../model/student.model.js";
+const BASE_URL=process.env.BASE_URL
 
 // Create a new student
 export const createStudent = async (req, res) => {
