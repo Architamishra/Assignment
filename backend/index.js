@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 dotenv.config();
-const PORT = process.env.PORT || 4001;
+const PORT = process.env.PORT || 4000;
 
 const URI = process.env.MongoDBURI;
 
@@ -30,4 +30,3 @@ app.use("/students", studentRoute); // Add student routes
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-module.exports = app;
