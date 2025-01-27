@@ -17,7 +17,7 @@ function Stu() {
   useEffect(() => {
     const fetchStudents = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/students");
+        const response = await axios.get("https://assignment-brown-five.vercel.app//students");
         setStudents(response.data);
       } catch (error) {
         console.error("Error fetching students:", error);
@@ -50,7 +50,7 @@ function Stu() {
       // Update existing student
       try {
         const response = await axios.put(
-          `http://localhost:4001/students/:rollnumber/${editingStudent}`, // Update endpoint with student ID
+          `https://assignment-brown-five.vercel.app//students/:rollnumber/${editingStudent}`, // Update endpoint with student ID
           newStudent
         );
         setStudents((prevStudents) =>
@@ -66,7 +66,7 @@ function Stu() {
       // Add new student
       try {
         const response = await axios.post(
-          "http://localhost:4001/students", // POST endpoint for adding a new student
+          "https://assignment-brown-five.vercel.app//students", // POST endpoint for adding a new student
           newStudent
         );
         setStudents([...students, response.data.student]);
@@ -83,7 +83,7 @@ function Stu() {
   const handleDeleteClick = async (studentId) => {
     try {
       await axios.delete(
-        `http://localhost:4001/students/delStudent/:id/${studentId}`
+        `https://assignment-brown-five.vercel.app//students/delStudent/:id/${studentId}`
       ); // DELETE endpoint with student ID
       setStudents(students.filter((s) => s._id !== studentId));
       alert(`Deleted student with ID: ${studentId}`);
