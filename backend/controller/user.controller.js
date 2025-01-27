@@ -1,5 +1,6 @@
 import User from "../model/user.model.js";
 import bcryptjs from "bcryptjs";
+const BASE_URL=process.env.BASE_URL
 
 export const signup = async (req, res) => {
   try {
